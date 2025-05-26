@@ -1,16 +1,94 @@
 body {
+  margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background: #fdf6f0;
   color: #333;
-  padding: 20px;
 }
 
-header {
+.header {
   background-color: #fcd5ce;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
 }
 
-section {
-  margin-top: 20px;
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  font-size: 1.1rem;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #8b5d4f;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #8b5d4f;
+}
+
+.card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.card .tags {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+.contact {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.contact h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+.footer {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 1rem;
 }
