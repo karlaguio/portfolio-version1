@@ -1,6 +1,6 @@
 # Karla's Portfolio 👩‍💻
 
-This is my personal frontend portfolio built with **React**, **TailwindCSS**, and **Vite**.
+This is my personal frontend portfolio built with **HTML**, **CSS**, and **JS**.
 
  Features:
 - Responsive design
