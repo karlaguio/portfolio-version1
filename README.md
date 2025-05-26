@@ -8,6 +8,6 @@ This is my personal frontend portfolio built with **React**, **TailwindCSS**, an
 - Tailwind styling
 - Hosted on GitHub Pages
 
-📡 Live Website: [karla-guio.github.io/karla-portfolio](https://karla-guio.github.io/karla-portfolio)
+Live Website: [karla-guio.github.io/karla-portfolio](https://karla-guio.github.io/karla-portfolio)
 
-🚀 Built with love and curiosity!
+Built with love and curiosity!
