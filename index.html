@@ -1,28 +1,61 @@
 <!DOCTYPE html>
-<html lang="eng">
-   <meta charset="UTF-8">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
   <title>Karla's Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
+  <header class="header">
     <h1>Hi, I'm Karla 👋</h1>
-    <p>Aspiring Frontend Developer | Minerva University Student</p>
+    <p>Frontend enthusiast, science communicator, and lifelong learner.</p>
   </header>
 
-  <section>
-    <h2>Projects</h2>
-    <ul>
-      <li><a href="#">link 1</a></li>
-      <li><a href="#">link 2</a></li>
-    </ul>
-  </section>
+  <main class="container">
+    <section>
+      <h2 class="section-title">Projects</h2>
+      <div class="project-grid">
+        <div class="card">
+          <h3>Gene Relationships Analyzer – Python</h3>
+          <p>Built a Python tool to compute all Longest Common Subsequences (LCS) between arbitrary gene strings.<br>
+             Visualized LCS relationships using matrices and implemented logic to reconstruct genealogical patterns.</p>
+          <p class="tags">Python • Algorithms • Biotech</p>
+          <a href="https://github.com/yourusername/gene-analyzer" target="_blank">View on GitHub →</a>
+        </div>
 
-  <section>
-    <h2>Contact</h2>
-    <p>Email: karla@example.com</p>
-  </section>
+        <div class="card">
+          <h3>WhisprNote – Audio Transcription & Summarization Tool</h3>
+          <p>Transcribes .mp3 audio using OpenAI’s Whisper API and summarizes it with GPT-3.5.<br>
+             Improves productivity by automating lecture and interview note-taking.</p>
+          <p class="tags">OpenAI API • Whisper • GPT-3.5</p>
+          <a href="https://github.com/yourusername/whisprnote" target="_blank">View on GitHub →</a>
+        </div>
 
-  <script src="script.js"></script>
+        <div class="card">
+          <h3>PolyglotPal – Language-Learning Web App</h3>
+          <p>Interactive app built with HTML, CSS, and JavaScript using spaced repetition and UX-first design.<br>
+             Collaborated with a global student team.</p>
+          <p class="tags">JavaScript • UX • Teamwork</p>
+          <a href="https://github.com/yourusername/polyglotpal" target="_blank">View on GitHub →</a>
+        </div>
+
+        <div class="card">
+          <h3>Daily Task Scheduler – Python</h3>
+          <p>Designed a scheduler to execute tasks based on priority, dependencies, and timing.<br>
+             Outputs full plan and time report using custom classes.</p>
+          <p class="tags">Python • Scheduling • OOP</p>
+          <a href="https://github.com/yourusername/task-scheduler" target="_blank">View on GitHub →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <h2>Let's Connect</h2>
+      <p>Email: <a href="mailto:karla@example.com">karla@example.com</a></p>
+      <p class="footer">© 2025 Karla Guio</p>
+    </section>
+  </main>
 </body>
 </html>
+
