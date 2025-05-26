@@ -1,0 +1,16 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fdf6f0;
+  color: #333;
+  padding: 20px;
+}
+
+header {
+  background-color: #fcd5ce;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+section {
+  margin-top: 20px;
+}
