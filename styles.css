@@ -1,10 +1,11 @@
 :root {
-    --primary-color: #5d5c61;
-    --secondary-color: #739dff; 
-    --accent-color: #ff9f1c; 
-    --background-color: #f8f9fa;
+    --primary-color: #333;
+    --secondary-color: #ff6b81;
+    --accent-color: #ffda79;
+    --background-color: #fff0f5;
     --card-bg-color: #fff;
     --text-color: #333;
+    --card-shadow: rgba(255, 107, 129, 0.2);
 }
 
 body {
@@ -15,12 +16,6 @@ body {
     line-height: 1.6;
 }
 
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 2rem 1.5rem;
-}
-
 /* Navbar */
 .navbar {
     display: flex;
@@ -29,83 +24,121 @@ body {
     padding: 1rem 1.5rem;
     background-color: var(--card-bg-color);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    font-family: 'Quicksand', sans-serif;
 }
 
 .navbar .logo a {
     font-size: 1.8rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--secondary-color); /* Pink logo */
     text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.navbar .logo a:hover {
+    transform: scale(1.05);
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    position: relative;
+    padding: 0.5rem;
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--secondary-color);
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
 }
 
 /* Hero Section */
 .hero {
     text-align: center;
     padding: 5rem 0;
-    background: linear-gradient(to right, #e0f7fa, #fce4ec); /* A soft, colorful gradient */
+    background: linear-gradient(135deg, #fce4ec 0%, #ffebee 100%); /* A soft, colorful gradient */
     border-radius: 15px;
     margin-top: 2rem;
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .hero p {
     font-size: 1.2rem;
     max-width: 700px;
     margin: 1rem auto;
-    color: #555;
+    color: #666;
 }
 
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in { animation: fadeIn 0.8s ease-out forwards; }
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+
 .primary-btn {
-    background-color: var(--accent-color);
+    background-color: var(--secondary-color);
     color: #fff;
 }
 .secondary-btn {
     background-color: transparent;
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
 }
 
-/* Project & Experience Cards */
+/* Card styles */
 .card, .experience-card {
     background-color: var(--card-bg-color);
     padding: 2rem;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px var(--card-shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover, .experience-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 25px var(--card-shadow);
 }
 
-.software-card { border-left: 5px solid #007bff; }
-.research-card { border-left: 5px solid #28a745; }
-.teaching-card { border-left: 5px solid #fd7e14; }
-
-.page-title {
-    font-size: 2.5rem;
-    font-family: 'Quicksand', sans-serif;
-    color: var(--primary-color);
-    text-align: center;
-}
+.software-card { border-left: 5px solid #ff9f1c; } /* Yellow accent */
+.research-card { border-left: 5px solid #739dff; } /* Blue accent */
+.teaching-card { border-left: 5px solid #28a745; } /* Green accent */
 
 /* Footer */
 .footer {
-    background-color: var(--primary-color);
-    color: #f0f2f5;
+    background-color: var(--secondary-color);
+    color: #fff;
     text-align: center;
     padding: 2.5rem 1.5rem;
     margin-top: 4rem;
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: auto;
 }
