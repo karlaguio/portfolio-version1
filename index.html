@@ -8,68 +8,80 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
+    
 <body>
-    <header class="navbar">
-        <div class="logo">
-            <a href="index.html">Karla Guio Cortes</a>
-        </div>
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+    
+    <header class="navbar" id="navbar">
+        <div class="logo">Karla Guio Cortes</div>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="software-dev.html">Software Dev</a></li>
-                <li><a href="teaching.html">Teaching</a></li>
-                <li><a href="ux-ui.html">UX/UI & Design</a></li>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#software">Software</a></li>
+                <li><a href="#teaching">Teaching</a></li>
+                <li><a href="#design">Design</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="container">
-        <section class="hero">
+        <section class="hero" id="home">
             <div class="hero-content">
-                <h1>Hello, I'm Karla Guio Cortes </h1>
-                <img id="my-photo" src="my-photo.jpg" alt="Professional photo of Karla Guio Cortes">
-                <p>I am a passionate builder at the intersection of technology, health, and education. I love creating solutions that make a real-world impact. Let's build something amazing together!</p>
-                <div class="cta-buttons">
-                    <a href="software-dev.html" class="btn primary-btn">See My Projects</a>
-                    <a href="research.html" class="btn secondary-btn">View My Research</a>
+                <div class="hero-greeting fade-in-up">Hello, I'm</div>
+                <h1 class="fade-in-up delay-1">Karla Guio Cortes</h1>
+                <div class="hero-subtitle fade-in-up delay-2">Technology × Health × Education</div>
+                
+                <div class="hero-photo fade-in-up delay-3">
+                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b5bc?w=400&h=400&fit=crop&crop=face" alt="Karla Guio Cortes" id="profilePhoto">
+                </div>
+                
+                <p class="fade-in-up delay-3">
+                    I am a passionate builder at the intersection of technology, health, and education. 
+                    I love creating solutions that make a real-world impact. Let's build something amazing together!
+                </p>
+                
+                <div class="cta-buttons fade-in-up delay-3">
+                    <a href="#projects" class="btn btn-primary">View My Projects</a>
+                    <a href="#research" class="btn btn-secondary">Explore Research</a>
                 </div>
             </div>
-            </section>
+        </section>
 
-        <section class="featured-work">
-            <h2>Featured Projects & Experiences</h2>
+        <section class="featured-work" id="projects">
+            <h2 class="section-title">Featured Projects & Experiences</h2>
             <div class="project-grid">
-                <div class="card featured-card software-card">
+                <div class="project-card software fade-in-up">
                     <h3>Prescripta - AI Medical Notetaker</h3>
-                    <p>Developed a prototype desktop app that transcribes and summarizes doctor-patient consultations in real-time.</p>
-                    <a href="software-dev.html" class="card-link">View Project →</a>
+                    <p>Developed a prototype desktop app that transcribes and summarizes doctor-patient consultations in real-time using advanced AI and natural language processing.</p>
+                    <a href="#software" class="card-link">View Project</a>
                 </div>
-                <div class="card featured-card research-card">
+                
+                <div class="project-card research fade-in-up delay-1">
                     <h3>Computational Multi-Omics Lab</h3>
-                    <p>Conducted RNA-seq analysis of human and mouse samples to investigate the mechanisms of Lupus nephritis.</p>
-                    <a href="research.html" class="card-link">View Research →</a>
+                    <p>Conducted RNA-seq analysis of human and mouse samples to investigate the mechanisms of Lupus nephritis, contributing to breakthrough research in autoimmune diseases.</p>
+                    <a href="#research" class="card-link">View Research</a>
                 </div>
-                <div class="card featured-card teaching-card">
-                    <h3>Edu-Heroes</h3>
-                    <p>Founded a 15-member volunteer group teaching STEM and English to rural Colombian students.</p>
-                    <a href="teaching.html" class="card-link">View Experience →</a>
+                
+                <div class="project-card teaching fade-in-up delay-2">
+                    <h3>Edu-Heroes Initiative</h3>
+                    <p>Founded a 15-member volunteer group teaching STEM and English to rural Colombian students, impacting over 100 students in underserved communities.</p>
+                    <a href="#teaching" class="card-link">View Experience</a>
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <div class="footer-content">
-            <p>Connect with me:</p>
+        <div class="container">
+            <p>Let's connect and build something amazing together</p>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/karlaguio" target="_blank">LinkedIn</a>
                 <a href="https://github.com/karlaguio" target="_blank">GitHub</a>
                 <a href="mailto:guio@uni.minerva.edu">Email</a>
             </div>
-            <p>© 2025 Karla Guio Cortes.</p>
+            <p style="color: var(--text-muted); margin-top: 2rem;">© 2025 Karla Guio Cortes. All rights reserved.</p>
         </div>
     </footer>
-    <script src="main.js"></script>
 </body>
 </html>
