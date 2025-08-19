@@ -95,5 +95,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const profilePhoto = document.getElementById('profilePhoto');
-    profilePhoto.src = 'my-photo.jpg';
+    profilePhoto.src = 'my-photo.png';
 });
