@@ -155,7 +155,75 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Add loading state for images
+    // Enhanced scroll-triggered animations for timeline and cards
+    const timelineItems = document.querySelectorAll('.timeline-item, .research-card, .leadership-card, .skill-category');
+    timelineItems.forEach(item => {
+        observer.observe(item);
+    });
+
+    // Skill tag hover effects
+    const skillTags = document.querySelectorAll('.skill-tag');
+    skillTags.forEach(tag => {
+        tag.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.1) translateY(-2px)';
+        });
+
+        tag.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1) translateY(0)';
+        });
+    });
+
+    // Language item hover effects
+    const languageItems = document.querySelectorAll('.language-item');
+    languageItems.forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateX(10px)';
+            this.style.background = 'rgba(124, 58, 237, 0.3)';
+        });
+
+        item.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateX(0)';
+            this.style.background = 'rgba(124, 58, 237, 0.1)';
+        });
+    });
+
+    // Timeline item animations
+    const timelineObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateX(0)';
+            }
+        });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.timeline-item').forEach(item => {
+        item.style.opacity = '0';
+        item.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        
+        if (item.querySelector('.timeline-content')) {
+            const isOdd = Array.from(item.parentElement.children).indexOf(item) % 2 === 0;
+            item.style.transform = isOdd ? 'translateX(-50px)' : 'translateX(50px)';
+        }
+        
+        timelineObserver.observe(item);
+    });
+
+    // Add stagger animation to skill tags
+    const skillCategories = document.querySelectorAll('.skill-category');
+    skillCategories.forEach((category, categoryIndex) => {
+        const tags = category.querySelectorAll('.skill-tag');
+        tags.forEach((tag, tagIndex) => {
+            tag.style.opacity = '0';
+            tag.style.transform = 'translateY(20px)';
+            tag.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            
+            setTimeout(() => {
+                tag.style.opacity = '1';
+                tag.style.transform = 'translateY(0)';
+            }, (categoryIndex * 200) + (tagIndex * 100));
+        });
+    });
     const profilePhoto = document.getElementById('profilePhoto');
     if (profilePhoto) {
         profilePhoto.addEventListener('load', () => {
@@ -184,3 +252,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     console.log('Portfolio website loaded successfully!');
 });
+
